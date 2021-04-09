@@ -7,10 +7,10 @@ namespace EmployeeTest
         static void Main(string[] args)
         {
             var employee1 = new Worker("Juwon", "Adeleke");
-            var employee2 = new SeniorManager("Badmus", "Paul", 7);
-            var employee3 = new SeniorManager("Gold", "Mariam", 3);
-            var employee4 = new JuniorManager("Morolabi", "Arike", 123);
-            var employee5 = new JuniorManager("Dave", "Matthew", 190);
+            var employee2 = new SeniorManager("Badmus", "Paul",5400M, 7);
+            var employee3 = new SeniorManager("Gold", "Mariam",90053M, 3);
+            var employee4 = new JuniorManager("Morolabi", "Arike",5320M, 123);
+            var employee5 = new JuniorManager("Dave", "Matthew",4500M, 190);
 
             Console.WriteLine($"{employee1}\nMonth pay: {employee1.CalculateSalary():C}");
             Console.WriteLine($"{employee2}\nMonth pay: {employee2.CalculateSalary():C}");

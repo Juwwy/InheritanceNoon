@@ -1,20 +1,27 @@
 namespace EmployeeTest
 {
-    public class Manager : Employee
+    public abstract class Manager : Employee
     {
-        public decimal Salary { get; set; } = 3000M;
-        public decimal BonusSalary { get; set; }
-        public Manager(string firstName, string lastName) : base(firstName, lastName)
+        // protected decimal salary;
+        // public decimal BonusSalary { get; set; }
+        private decimal baseSalary;
+        public decimal BaseSalary
         {
-            
+            get { return baseSalary; }
+            set { baseSalary = value; }
+        }
+        
+        public Manager(string firstName, string lastName, decimal baseSalary) : base(firstName, lastName)
+        {
+            BaseSalary = baseSalary;
         } 
 
         
 
-        public override decimal CalculateSalary()
-        {
-            return Salary;
-        }
+        
+
+        
+       
         
     }
 }

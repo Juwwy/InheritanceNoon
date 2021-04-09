@@ -3,7 +3,8 @@ namespace EmployeeTest
     public class SeniorManager : Manager
     {
         public int Evaluation { get; set; }
-        public SeniorManager(string firstName, string lastName, int evaluation) : base(firstName, lastName)
+        public decimal BonusSalary = 160M;
+        public SeniorManager(string firstName, string lastName, decimal baseSalary, int evaluation) : base(firstName, lastName, baseSalary)
         {
             Evaluation = evaluation;
         }
@@ -11,7 +12,7 @@ namespace EmployeeTest
         {
             decimal newPay = 0;
 
-            return Evaluation >=6 ? newPay = Salary + BonusSalary : Salary;
+            return Evaluation >=6 ? newPay = BaseSalary + BonusSalary : BaseSalary;
 
 
         }
